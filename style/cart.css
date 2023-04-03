@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: crimson;
+    background-image: url(../img/falling-heart.gif);
+    margin-bottom: 30px;
+    overflow: hidden;
+    animation: slow 4s ease forwards;
+}
+
+label {
+    color: white;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes slow {
+    from {
+        max-width: 30%;
+    }
+
+    to {
+        max-width: 100%;
+    }
+}
+
+.cart-title {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 55px;
+    color: white;
+}
+
+.cart-title .cart-infor {
+    width: 13vw;
+    border: outset 2px pink;
+    padding: 10px;
+    font-size: large;
+    background-color: rgba(255, 0, 68, 0.509);
+}
+
+.cart-title .minus-add {
+    width: 20vw;
+    border: outset 2px pink;
+    padding: 10px;
+    font-size: large;
+    background-color: rgba(255, 0, 68, 0.509);
+}
+
+.cart-title .cart-delete {
+    width: 10vw;
+    border: outset 2px pink;
+    padding: 10px;
+    font-size: large;
+    background-color: rgba(255, 0, 68, 0.509);
+}
+
+
+.cart-table {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: -40px;
+    font-size: medium;
+}
+
+.cart-table .cart-infor {
+    width: 13vw;
+    height: 100px;
+    border: outset 2px pink;
+    padding: 10px;
+    overflow: hidden;
+    ;
+}
+
+.cart-table .minus-add {
+    width: 20vw;
+    height: 100px;
+    border: outset 2px pink;
+    padding: 10px;
+}
+
+.cart-table .cart-delete {
+    width: 10vw;
+    height: 100px;
+    border: outset 2px pink;
+    padding: 10px;
+}
+
+.cart-table span button,
+.pay-confirm {
+    padding: 1vw;
+    background-color: pink;
+    border-radius: 20px;
+    border: outset palevioletred 0.3vw;
+}
+
+.cart-table span button:hover,
+.pay-confirm:hover {
+    background-color: rgb(246, 206, 213);
+    border: inset palevioletred 0.3vw;
+}
+
+.cart-table span button:active,
+.pay-confirm:active {
+    background-color: pink;
+    border: outset palevioletred 0.3vw;
+}
+
+.total {
+    font-family: 'Courier New', Courier, monospace;
+    border: outset 2px violet;
+    text-align: center;
+    margin: -20px 20px 20px 20px;
+    padding: 30px;
+    font-size: xx-large;
+    font-size: bolder;
+    color: crimson;
+}
+
+.pay-confirm-container {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 10px;
+}
+
+.pay-input {
+    display: none;
+    position: sticky;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: rgba(103, 26, 77, 0.696);
+    background-image: url(../img/heart.gif);
+    text-align: center;
+    top: 55px;
+}

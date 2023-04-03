@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: crimson;
+    background-image: url(../img/falling-heart.gif);
+    margin-bottom: 30px;
+    overflow: hidden;
+    animation: slow 4s ease forwards;
+}
+
+@keyframes slow {
+    from {
+        max-width: 30%;
+    }
+
+    to {
+        max-width: 100%;
+    }
+}
+
+h2 {
+    background-color: rgba(241, 60, 121, 0.676);
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.all-app-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.soft-candy,
+.hard-candy,
+.chocolate {
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 95%;
+    margin-top: 20px;
+    padding: 20px;
+    color: aliceblue;
+}
+
+.soft-candy {
+    background-image: url(../img/h2-genre/soft-candy.jpg);
+    background-position: left;
+}
+
+.hard-candy {
+    background-image: url(../img/h2-genre/hard-candy.jpg);
+    background-position: bottom;
+}
+
+.chocolate {
+    background-image: url(../img/h2-genre/chocolate.jpg);
+    background-position: center;
+}
+
+.productOne,
+.productTwo,
+.productThree {
+    max-width: 150px;
+    height: 250px;
+    overflow: hidden;
+    font-weight: bold;
+    margin: 30px;
+    font-size: small;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.productOne {
+    color: rgb(246, 62, 99);
+    box-shadow: 5px 5px 15px 5px rgba(255, 166, 0, 0.738);
+    background-image: url(../img/h2-genre/product-bg1.jpg);
+    border: 1px salmon solid;
+    background-size: cover;
+    
+}
+
+.productTwo {
+    color: blue;
+    box-shadow: 5px 5px 15px 5px rgba(0, 255, 255, 0.588);
+    background-image: url(../img/h2-genre/product-bg2.jpg);
+    background-position: bottom;
+}
+
+.productThree {
+    color: crimson;
+    box-shadow: 5px 5px 15px 5px palevioletred;
+    background-image: url(../img/h2-genre/product-bg3.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+
+.productOne:hover,
+.productTwo:hover,
+.productThree:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.productOne:hover {
+    box-shadow: 2px 2px 8px 2px chocolate;
+}
+
+.productTwo:hover {
+    box-shadow: 2px 2px 8px 2px rgb(3, 143, 143);
+}
+
+.productThree:hover {
+    box-shadow: 2px 2px 8px 2px crimson;
+}
+
+.productOne img,
+.productTwo img,
+.productThree img {
+    width: 150px;
+    height: 135px;
+}
+
+.display-name {
+    height: 50px;
+    padding: 10px 1px 5px 1px;
+}
+
+.add-cart-container {
+    display: flex;
+    justify-content: center;
+}
+
+.add-cart {
+    margin: 10px;
+    border: lightgoldenrodyellow outset 3px;
+    background-color: orange;
+    background-image: url(../img/square-fall.gif);
+    border-radius: 10px;
+    text-align: center;
+    width: 70px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: small;
+}
+
+.add-cart:hover {
+    border: pink inset 3px;
+    background-color: crimson;
+    transition-duration: 0.3s;
+}
+
+.add-cart i {
+    color: white;
+}

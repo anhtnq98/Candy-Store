@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: crimson;
+    background-image: url(../img/falling-heart.gif);
+    margin-bottom: 30px;
+    overflow: hidden;
+    animation: slow 4s ease forwards;
+}
+
+@keyframes slow {
+    from {
+        max-width: 30%;
+    }
+
+    to {
+        max-width: 100%;
+    }
+}
+
+h5 {
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    color: crimson;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    background-color: rgba(241, 60, 121, 0.676);
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.all-app-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.soft-candy,
+.hard-candy,
+.chocolate {
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 95%;
+    margin-top: 20px;
+    padding: 20px;
+    color: aliceblue;
+}
+
+.soft-candy {
+    background-image: url(../img/h2-genre/soft-candy.jpg);
+    background-position: left;
+}
+
+.hard-candy {
+    background-image: url(../img/h2-genre/hard-candy.jpg);
+    background-position: bottom;
+}
+
+.chocolate {
+    background-image: url(../img/h2-genre/chocolate.jpg);
+    background-position: center;
+}
+
+.infor-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 0 15px 0px;
+}
+
+.card-infor-title1, .card-infor-title2, .card-infor-title3 {
+    margin-top: 10px;
+    color: white;
+}
+
+.card-infor-title1 {
+    background-color: rgba(255, 68, 0, 0.723);
+    border-radius: 20px;
+}
+
+.card-infor-title2 {
+    background: rgba(0, 0, 255, 0.833);
+    border-radius: 20px;
+}
+
+.card-infor-title3 {
+    background-color: rgba(255, 0, 51, 0.835);
+    border-radius: 20px;
+}
+
+.card-infor {
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.719);
+    border-radius: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: rgba(230, 228, 228, 0.684)
+}
+
+.flip-card-back {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    padding: 5px;
+}
+
+#s-candy {
+    background-image: url(../img/h2-genre/product-bg1.jpg);
+    color: orangered;
+}
+
+#h-candy {
+    background-image: url(../img/h2-genre/product-bg2.jpg); 
+    color: blue;
+}
+
+#c-candy {
+    background-image: url(../img/h2-genre/product-bg3.jpg);
+    color: red;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/register-login.css">
+    <script src="https://kit.fontawesome.com/33f1ec5491.js"></script>
+    <link rel="stylesheet" href="../style/loading.css">
+    <title>Đăng ký</title>
+</head>
+
+<body onload="afterPageLoad()" class="body">
+    <div class="click-back" onclick="backToIndex()">
+        <p>Về trang chủ</p>
+    </div>
+    <div id="wrapper">
+        <form action="" id="form-register">
+            <h1 class="form-heading">Đăng ký</h1>
+            <div class="form-group">
+                <i class="fa-solid fa-user"></i>
+                <input id="userName" type="text" class="form-input" placeholder="Tên đăng nhập" required><span
+                    class="star">*</span>
+            </div>
+            <div class="form-group">
+                <i class="fa-sharp fa-solid fa-venus-mars"></i>
+                <!-- <input id="gender" type="text" class="form-input" placeholder="Giới tính"> -->
+                <input id="gender1" class="gender" name="gender" type="radio" value="Nam" /><span>Nam</span>
+                <input id="gender2" class="gender" name="gender" type="radio" value="Nữ" /><span>Nữ</span>
+                <input id="gender3" class="gender" name="gender" type="radio" value="Khác" /><span>Khác</span>
+            </div>
+            <div class="form-group">
+                <i class="fa-solid fa-at"></i>
+                <input id="email" type="email" class="form-input" placeholder="Email  (VD: email@address.com)"
+                    required><span class="star">*</span>
+            </div>
+            <div class="form-group">
+                <i class="fa-sharp fa-solid fa-phone"></i>
+                <input id="tel" type="number" class="form-input" placeholder="VD: 0912313123"
+                    required><span class="star">*</span>
+            </div>
+            <div class="form-group">
+                <i class="fa-sharp fa-solid fa-cake-candles"></i>
+                <input id="birth" type="text" class="form-input" placeholder="Ngày/Tháng/Năm">
+            </div>
+            <div class="form-group">
+                <i class="fa-solid fa-key"></i>
+                <input id="password" type="password" class="form-input" placeholder="Mật khẩu" required><span
+                    class="star">*</span>
+            </div>
+            <div class="form-group">
+                <i class="fa-solid fa-key"></i>
+                <input id="confirm-password" type="password" class="form-input" placeholder="Nhập lại mật khẩu"
+                    required><span class="star">*</span>
+            </div>
+            <div class="form-group">
+                <i class="fa-solid fa-user-secret"></i>
+                <input id="secret-question" type="text" class="form-input"
+                    placeholder="BÍ MẬT: (Tên ca sĩ mà bạn yêu thích)" required><span class="star">*</span>
+            </div>
+            <span id="error1" class="error"></span><br>
+            <span id="error2" class="error"></span><br>
+            <input onclick="register(event)" type="submit" value="Đăng ký" class="form-submit">
+            <p>Đã có tài khoản? Hãy đăng nhập bên dưới.</p>
+            <a href="./login.html"><input type="button" value="Đăng nhập" class="form-submit"></a>
+        </form>
+    </div>
+    <div id="snack-bar-register">
+        Bạn đã đăng kí thành công! Mời đăng nhập!
+    </div>
+    <div id="mask"></div>
+    <div id="loading">Đang tải, vui lòng đợi một lát!</div>
+    <script src="../js/register-login.js"></script>
+    <script src="../js/loading.js"></script>
+
+</body>
+
+</html>

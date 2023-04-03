@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/register-login.css">
+    <script src="https://kit.fontawesome.com/33f1ec5491.js"></script>
+    <link rel="stylesheet" href="../style/loading.css">
+    <title>Đăng nhập</title>
+</head>
+
+<body onload="afterPageLoad()" class="body">
+    <div class="click-back" onclick="backToIndex()">
+        <p>Về trang chủ</p>
+    </div>
+    <div id="wrapper">
+        <form action="" id="form-register">
+            <h1 class="form-heading">Đăng nhập</h1>
+            <div class="form-group">
+                <i class="fa-solid fa-user"></i>
+                <input id="name-or-email" type="text" class="form-input" placeholder="Tên đăng nhập hoặc email">
+            </div>
+            <div class="form-group">
+                <i class="fa-solid fa-key"></i>
+                <input id="check-password" type="password" class="form-input" placeholder="Mật khẩu">
+            </div>
+            <span id="error1" class="error"></span><br>
+            <input onclick="login(event)" type="submit" value="Đăng nhập" class="form-submit">
+            <p>Chưa có tài khoản? Hãy đăng ký bên dưới.</p>
+            <a href="./register.html"><input type="button" value="Đăng ký" class="form-submit"></a>
+        </form>
+    </div>
+    <div id="snack-bar-login">
+    </div>
+    <div id="mask"></div>
+    <div id="loading">Đang tải, vui lòng đợi một lát!
+        <img src="../img/loading/loading2.gif" width="70%" alt="">
+    </div>
+    <script src="../js/register-login.js"></script>
+    <script src="../js/loading.js"></script>
+</body>
+
+</html>

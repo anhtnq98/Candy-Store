@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quản lý người dùng</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/33f1ec5491.js"></script>
+    <link rel="stylesheet" href="../style/admin.css">
+    <link rel="stylesheet" href="../style/header-footer.css">
+    <link rel="stylesheet" href="../style/loading.css">
+</head>
+
+<body onload="afterPageLoad()">
+    <header>
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Bạn đang tìm gì?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <!-- admin-user -->
+            <div class="edit-infor" id="edit-infor">
+                <a href="./login.html"><img src="../img/pin.png" alt="Ảnh khá lỗi" width="40px"><br>Mời đăng nhập</a>
+            </div>
+            <div class="cart" id="my-cart"></div>
+        </div>
+        <nav class="stage">
+            <div class="logo"><img src="../img/logo.png" width="100%" alt=""></div>
+            <div id="home" class="div">
+                <p id="homep" class="p"><a class="linkb" href="/index.html">Trang chủ</a></p>
+            </div>
+            <div class="div" id="admin-product">
+                <p class="p"><a class="linkb" href="./admin-product.html">Ql sản phẩm</a></p>
+            </div>
+            <div class="div" id="admin-user">
+                <p class="p"><a class="linkb" style="font-size: large;" href="./admin-user.html">QL người dùng</a></p>
+            </div>
+        </nav>
+        <div class="register-login" id="register-login">
+        </div>
+    </header>
+
+    <main>
+        <h1>Admin - Quản lý đơn hàng</h1>
+        <table>
+            <tbody id="renderDonHang">
+
+            </tbody>
+        </table>
+        <div id="mask"></div>
+        <div id="loading">Đang tải, vui lòng đợi một lát!</div>
+    </main>
+
+    <script src="../js/admin-manager.js"></script>
+    <script src="../js/loading.js"></script>
+</body>
+
+</html>

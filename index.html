@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Anie Candy</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/33f1ec5491.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+    <link rel="stylesheet" href="./style/header-footer.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/loading.css">
+</head>
+
+<body onload="afterPageLoad()">
+    <header>
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Bạn đang tìm gì?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <!-- admin-user -->
+            <div onclick="adminManager()" class="edit-infor" id="edit-infor">
+                <a href="./html/login.html"><img src="../img/pin.png" alt="Ảnh khá lỗi" width="40px"><br>Mời đăng nhập</a>
+            </div>
+            <div id="my-cart" class="cart">
+            </div>
+        </div>
+        <nav class="stage">
+            <div class="logo"><img src="./img/logo.png" width="100%" alt=""></div>
+            <div id="home" class="div">
+                <p id="homep" class="p"><a class="linka" href="./index.html">Trang chủ</a></p>
+            </div>
+            <div class="div" id="product">
+                <p class="p"><a class="linkb" href="./html/sale-product.html">Sản phẩm</a></p>
+            </div>
+            <div class="div" id="about">
+                <p class="p"><a class="linkb" href="./html/candy-infor.html">Thông tin</a></p>
+            </div>
+            <div class="div" id="contact">
+                <p class="p"><a class="linkb" href="./html/contact.html">Liên hệ</a></p>
+            </div>
+        </nav>
+        <div class="register-login" id="register-login">
+        </div>
+    </header>
+
+    <main>
+        <h1>Về chúng tôi</h1>
+
+        <div class="slideshow-container">
+            <div class="mySlider fade">
+                <div class="slider-article">
+                    <img class="slider-img" src="./img/slider/slider-1.png" alt="Ảnh khá lỗi" width="350vh"
+                        height="350vh" />
+                    <div class="img-infor">
+                        <div class="text">Anie Candy</div>
+                        <p> Anie Candy là thương hiệu kẹo được thành lập vào năm 2023 và nhập khẩu bánh kẹo trực tiếp
+                            về Việt Nam. <br><br>
+                            Shop có các loại kẹo dẻo hương trái cây, kẹo cứng cùng kẹo sô-cô-la vị ngọt đậm đà phù
+                            hợp mọi lứa tuổi. <br><br>
+                            Khách hàng có thể liên hệ trực tiếp với shop để đặt riêng cho mình những gói
+                            kẹo phiên bản giới hạn được sản xuất tại nước ngoài. <br><br>
+                            Rất hân hạnh được phục vụ quý khách!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlider fade">
+                <div class="slider-article">
+                    <img class="slider-img" src="./img/slider/slider-2.jpg" alt="Ảnh khá lỗi" width="350vh"
+                        height="350vh" />
+                    <div class="img-infor">
+                        <div class="text">Giảm giá vào các dịp lễ và cuối năm</div>
+                        <p> Trong các dịp nghỉ lễ và cuối năm, chúng tôi luôn tổ chức chương trình giảm giá nhằm
+                            mục đích tri ân khách hàng. <br><br>
+                            Hãy chắc chắn rằng bạn không bỏ lỡ bất cứ thứ gì! <br><br>
+                            Sản phẩm có thể giảm giá đến 90%!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlider fade">
+                <div class="slider-article">
+                    <img class="slider-img" src="./img/h2-genre/chocolate.jpg" alt="Ảnh khá lỗi" width="350vh"
+                        height="350vh" />
+                    <div class="img-infor">
+                        <div class="text">Lorem Việt hóa</div>
+                        <p>Bản thân công ty là một công ty rất thành công. Đừng để ai chạy trốn khỏi công việc khó khăn
+                            Anh ta muốn tâng bốc, để bất kỳ ai trong chúng ta buộc tội anh ta đào tạo, hoặc làm theo nó,
+                            hầu hết thời gian
+                            hay niềm vui rơi xuống để làm cho lời khen ghét được nhận? (Lorem Việt hóa)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlider fade">
+                <div class="slider-article">
+                    <img class="slider-img" src="./img/h2-genre/hard-candy.jpg" alt="Ảnh khá lỗi" width="350vh"
+                        height="350vh" />
+                    <div class="img-infor">
+                        <div class="text">Lorem Việt hóa</div>
+                        <p>Bản thân công ty là một công ty rất thành công. Chúng tôi đổ lỗi cho sự lựa chọn của niềm vui
+                            Sự từ chối mà hiện tại sẽ tuân theo càng nghiêm trọng thì tâm trí càng lớn
+                            nỗi đau nào mà người tố cáo không nhận được ở đây để bị đẩy lùi? (Lorem Việt hóa)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlider fade">
+                <div class="slider-article">
+                    <img class="slider-img" src="./img/h2-genre/soft-candy.jpg" alt="Ảnh khá lỗi" width="350vh"
+                        height="350vh" />
+                    <div class="img-infor">
+                        <div class="text">Lorem Việt hóa</div>
+                        <p>Cảm ơn rất nhiều. Tôi sẽ giải thích chuyến bay của cuộc sống từ đâu và như thế nào
+                            Chúng tôi mang lại niềm vui cho kết quả, nhưng có cách nào khác để có được một cái miễn phí,
+                            không lớn hơn hiện tại?
+                            Kiểm tra các dịch vụ khác của chúng tôi miễn phí! (Lorem Việt hóa)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlider(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlider(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlider(1)"><i class="fa-solid fa-heart"></i></span>
+            <span class="dot" onclick="currentSlider(2)"><i class="fa-solid fa-heart"></i></span>
+            <span class="dot" onclick="currentSlider(3)"><i class="fa-solid fa-heart"></i></span>
+            <span class="dot" onclick="currentSlider(4)"><i class="fa-solid fa-heart"></i></span>
+            <span class="dot" onclick="currentSlider(5)"><i class="fa-solid fa-heart"></i></span>
+        </div>
+    </main>
+
+    <footer>
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <img src="./img/logo.png" width="150px" height="90px" alt="">
+                </div>
+                <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="link-boxes">
+                <ul class="box">
+                    <li class="link_name">Công ty</li>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Liên lạc</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Khởi đầu</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Dịch vụ</li>
+                    <li><a href="#">Thiết </a></li>
+                    <li><a href="#">Web design</a></li>
+                    <li><a href="#">Logo design</a></li>
+                    <li><a href="#">Banner design</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Account</li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">My account</a></li>
+                    <li><a href="#">Prefrences</a></li>
+                    <li><a href="#">Purchase</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Courses</li>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Photography</a></li>
+                    <li><a href="#">Photoshop</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2021 <a href="#">Anie Candy</a>All rights reserved</span>
+                <span class="policy_terms">
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Terms & condition</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="mask"></div>
+    <div id="loading">Đang tải, vui lòng đợi một lát!
+        <img src="./img/loading/loading2.gif" width="70%" alt="">
+    </div>
+
+    <script>
+        // chuyển đến trang đăng nhập
+        function loginPages() {
+            window.location.href = "./html/login.html";
+        }
+
+        // chuyển đến trang đăng ký
+        function registerPages() {
+            window.location.href = "./html/register.html";
+        }
+
+        //
+        let loginPersonFlag = JSON.parse(localStorage.getItem("loginFlag"));
+        if (loginPersonFlag == null) {
+            document.getElementById("register-login").innerHTML =
+                ` <div onclick="loginPages()" ><button class="login">Đăng nhập <i class="fa-solid fa-user-plus"></i></button></div>
+        <div onclick="registerPages()" ><button class="login">Đăng ký <i class="fa-sharp fa-solid fa-right-from-bracket"></i></button></div>`;
+        } else {
+            document.getElementById("register-login").innerHTML =
+                `<p class = "welcome">Xin chào, ${loginPersonFlag.name}!</p>
+        <div onclick="indexPages()" ><button class="login">Đăng xuất <i class="fa-sharp fa-solid fa-right-from-bracket"></i></button></div>`;
+        }
+
+        // log-out
+        function indexPages() {
+            localStorage.removeItem("loginFlag");
+            window.location.href = "./index.html";
+        }
+
+        // check xem có phải admin không
+        if (loginPersonFlag == null) {
+            document.getElementById("my-cart").innerHTML =
+                `<a href="./html/cart.html"><img src="./img/shopping-cart-shopping.gif" width="90vw"
+                height="90vh" alt=""></a>
+                <div class="cart-quantity" id="cart-quantity"></div>`
+        } else if (loginPersonFlag.name == "Admin") {
+            document.getElementById("edit-infor").innerHTML =
+                ` <a href="./html/admin-manager.html"><img src="./img/pin.png" alt="Ảnh khá lỗi" width="40px">&nbsp;<i class="fa-solid fa-crown"></i>Quản &nbsp; lý trang web</a>`
+        } else {
+            document.getElementById("edit-infor").innerHTML =
+                ` <a href="./html/for-user.html"><img src="./img/pin.png" alt="Ảnh khá lỗi" width="40px">&nbsp;&nbsp;<i class="fa-solid fa-user-pen"></i>Thay &nbsp; đổi thông &nbsp; tin</a>`
+            document.getElementById("my-cart").innerHTML =
+                `<a href="./html/cart.html"><img src="./img/shopping-cart-shopping.gif" width="90vw"
+                height="90vh" alt=""></a>
+                <div class="cart-quantity" id="cart-quantity"></div>`
+        } 
+
+
+        // lấy số lượng trong giỏ hàng
+        function quantityCartUser() {
+            let arrCart = JSON.parse(localStorage.getItem("listProductCart"));
+            let cartCount = 0;
+            if (arrCart == null || loginPersonFlag == null) {
+                document.getElementById("cart-quantity").innerHTML = cartCount;
+            } else {
+                for (let i = 0; i < arrCart.length; i++) {
+                    if (arrCart[i].userLogin == loginPersonFlag.name) {
+                        cartCount++;
+                    }
+                }
+                document.getElementById("cart-quantity").innerHTML = cartCount;
+            }
+        }
+        quantityCartUser();
+
+    </script>
+    <script src="./js/loading.js"></script>
+    <script src="./js/slider.js"></script>
+</body>
+
+</html>

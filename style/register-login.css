@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background: url(../img/register-login/login-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    font-weight: bold;
+}
+
+.body .click-back {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.body .click-back p {
+    background: url(../img/register-login/button.jpg);
+    background-size: cover;
+    background-position:left;
+    width: 350px;
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    border: 1px crimson solid;
+    border-radius: 10px;
+    cursor: pointer;
+    color: crimson;
+}
+
+.body .click-back p:hover {
+    background: url(../img/register-login/login-bg.jpg);
+    background-size: cover;
+}
+
+span {
+    color: crimson;
+    margin: 0 8px 0 1px;
+}
+
+.star {
+    color: red;
+}
+
+#wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-register {
+    max-width: 350px;
+    background-image: url(../img/register-login/form-bg.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    flex-grow: 1;
+    padding: 30px 30px 40px;
+    border: solid 1px palevioletred;
+    box-shadow: 0px 0px 20px 5px palevioletred;
+}
+
+.form-heading {
+    color: crimson;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: large;
+}
+
+.form-group {
+    border-bottom: 1px solid crimson;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.form-group i {
+    color: crimson;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+.form-input,
+.error {
+    background: transparent;
+    border: 0;
+    outline: none;
+    flex-grow: 1;
+}
+
+.form-input {
+    color: crimson;
+}
+
+.error {
+    color: white;
+    background-color: crimson;
+    padding: 1px 0px 1px 0px;
+    font-style: italic;
+    text-align: left;
+    font-size: x-small;
+    font-family: sans-serif;
+}
+
+.answer {
+    color: yellow;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: left;
+    background-color: #000000;
+}
+
+.form-input::placeholder {
+    color: palevioletred;
+    font-size: small;
+}
+
+.form-select {
+    background: transparent;
+    border: 0;
+    color: crimson;
+    outline: none;
+    border-top: double 2px;
+    flex-grow: 1;
+}
+
+.form-select:hover {
+    border-top: double 2px #000000;
+    color: #000000;
+}
+
+.form-submit {
+    background: transparent;
+    border: 3px double crimson;
+    color: crimson;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    transition: 0.5s ease-in-out;
+    margin-top: 25px;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.form-submit:hover {
+    box-shadow: 0px 0px 24px 11px crimson;
+    cursor: pointer;
+}
+
+#wrapper p {
+    font-size: small;
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(13, 2, 56);
+    font-weight: bold;
+}
+
+#snack-bar-register,
+#snack-bar-login {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 170px;
+    background-image: url(../img/pop-up.png);
+    background-size: cover;
+    border: 2px solid crimson;
+    box-shadow: 0px 0px 30px 11px palevioletred;
+    text-align: center;
+    border-radius: 5px;
+    padding: 30px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 130px;
+    font-size: 17px;
+    padding: 25px;
+    color: crimson;
+}
+
+#snack-bar-register {
+    margin-left: -180px;
+}
+
+#snack-bar-login {
+    margin-left: -175px;
+}
+
+#snack-bar-register.show,
+#snack-bar-login.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 130px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 130px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 130px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 130px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quản lý sản phẩm</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/33f1ec5491.js"></script>
+    <link rel="stylesheet" href="../style/admin.css">
+    <link rel="stylesheet" href="../style/header-footer.css">
+    <link rel="stylesheet" href="../style/loading.css">
+</head>
+
+<body onload="afterPageLoad()">
+    <header>
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Bạn đang tìm gì?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <!-- admin-user -->
+            <div class="edit-infor" id="edit-infor">
+                <a href="./login.html"><img src="../img/pin.png" alt="Ảnh khá lỗi" width="40px"><br>Mời đăng nhập</a>
+            </div>
+            <div class="cart" id="my-cart"></div>
+        </div>
+        <nav class="stage">
+            <div class="logo"><img src="../img/logo.png" width="100%" alt=""></div>
+            <div id="home" class="div">
+                <p id="homep" class="p"><a class="linkb" href="/index.html">Trang chủ</a></p>
+            </div>
+            <div class="div" id="admin-product">
+                <p class="p"><a class="linka" href="./admin-product.html">Ql sản phẩm</a></p>
+            </div>
+            <div class="div" id="admin-user">
+                <p class="p"><a class="linkb" style="font-size: large;" href="./admin-user.html">QL người dùng</a></p>
+            </div>
+        </nav>
+        <div class="register-login" id="register-login">
+        </div>
+    </header>
+
+    <main>
+        <h1 id="top">Quản lý sản phẩm</h1>
+        <div class="bigContainer">
+            <div class="containerOne">
+                <div class="small-container">
+                    <label id for="product-name">Tên sản phẩm</label> <br>
+                    <input class="product-input" id="product-name" type="text" placeholder="Tên sản phẩm"> <br>
+                    <label for="genre">Loại kẹo</label> <br>
+                    <select class="product-select" name="genre" id="genre" required>
+                        <option value="Kẹo dẻo">Kẹo dẻo</option>
+                        <option value="Kẹo cứng">Kẹo cứng</option>
+                        <option value="Kẹo sô-cô-la">Kẹo sô-cô-la</option>
+                    </select> <br>
+                </div>
+                <div class="small-container">
+                    <label for="made-in">Xuất xứ</label> <br>
+                    <input class="product-input" id="made-in" type="text" placeholder="Nơi xuất xứ"> <br>
+                    <label for="price">Giá tiền</label> <br>
+                    <input class="product-input" id="price" type="number" placeholder="Giá tiền"> <br>
+                </div>
+            </div>
+            <div class="small-container">
+                <input class="product-input" type="file" id="imgProduct" style="outline: none" />
+                <img id="image" src="" alt="Ảnh khá lỗi" width="100px" height="100px" />
+            </div>
+            <button id="create" class="create" onclick="saveInfor()">Thêm sản phẩm</button>
+            <button id="update" class="update" onclick="updateInfor()">Cập nhật sản phẩm</button>
+            <hr>
+
+            <div class="containerTwo">
+                <label for="">----- Tìm sản phẩm -----</label><br>
+                <input class="product-input" id="search" type="text" placeholder="Tìm sản phẩm"> <br>
+                <button class="button-55" onclick="searchProduct()">Tìm</button>
+                <table id="table" border="1px">
+                </table>
+            </div>
+        </div>
+        <div id="mask"></div>
+        <div id="loading">Đang tải, vui lòng đợi một lát!</div>
+    </main>
+    <script src="../js/admin-product.js"></script>
+    <script src="../js/loading.js"></script>
+</body>
+
+</html>

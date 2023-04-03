@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: crimson;
+    background-image: url(../img/falling-heart.gif);
+    margin-bottom: 30px;
+    overflow: hidden;
+    animation: slow 4s ease forwards;
+}
+
+@keyframes slow {
+    from {
+        max-width: 30%;
+    }
+
+    to {
+        max-width: 100%;
+    }
+}
+
+/* slider */
+
+.mySlides {
+    display: none
+}
+
+.slider-article {
+    display: flex;
+}
+
+.slider-article p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: large;
+    padding: 40px;
+}
+
+
+.slider-img {
+    vertical-align: middle;
+}
+
+.img-infor {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.615);
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    border: 5px dashed pink;
+
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(233, 85, 134, 0.149);
+
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(223, 2, 46, 0.769);
+}
+
+.text {
+    color: #f2f2f2;
+    width: 100%;
+    height: 15%;
+    padding-top: 15px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: x-large;
+    background-color: rgba(237, 53, 115, 0.673);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    color: plum;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    color: crimson;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+#mask {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.2;
+}
+
+#loading {
+    width: 300px;
+    height: 50px;
+    padding-top: 8px;
+    line-height: 30px;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border: solid 5px palevioletred;
+    background: white;
+    background-image: url(../img/loading.gif);
+    background-size: cover;
+    color: crimson;
+    border-radius: 20px;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 20px
+    }
+
+    .slider-article {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-image: url(../img/heart.gif);
+        background-color: rgba(255, 192, 203, 0.588);
+    }
+
+    .slider-article img {
+        width: 50%;
+        height: 60vh;
+    }
+
+    .slider-article p {
+        font-size: medium;
+    }
+
+    .text {
+        color: #f2f2f2;
+        width: 100%;
+        height: 60px;
+        font-weight: bolder;
+        font-size: x-large;
+        background-color: rgba(237, 53, 115, 0.673);
+    }
+
+}

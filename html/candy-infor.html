@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Thông tin sản phẩm</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/33f1ec5491.js"></script>
+    <link rel="stylesheet" href="../style/header-footer.css">
+    <link rel="stylesheet" href="../style/loading.css">
+    <link rel="stylesheet" href="../style/candy-infor.css">
+</head>
+
+<body onload="afterPageLoad()">
+    <header>
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Bạn đang tìm gì?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <!-- admin-user -->
+            <div class="edit-infor" id="edit-infor">
+                <a href="./login.html"><img src="../img/pin.png" alt="Ảnh khá lỗi" width="40px"><br>Mời đăng nhập</a>
+            </div>
+            <div class="cart" id="my-cart"></div>
+        </div>
+        <nav class="stage">
+            <div class="logo"><img src="../img/logo.png" width="100%" alt=""></div>
+            <div id="home" class="div">
+                <p id="homep" class="p"><a class="linkb" href="/index.html">Trang chủ</a></p>
+            </div>
+            <div class="div" id="product">
+                <p class="p"><a class="linkb" href="./sale-product.html">Sản phẩm</a></p>
+            </div>
+            <div class="div" id="about">
+                <p class="p"><a class="linka" href="./candy-infor.html">Thông tin</a></p>
+            </div>
+            <div class="div" id="contact">
+                <p class="p"><a class="linkb" href="./contact.html">Liên hệ</a></p>
+            </div>
+        </nav>
+        <div class="register-login" id="register-login">
+        </div>
+    </header>
+
+    <main>
+        <h1>Thông tin sản phẩm</h1>
+        <div class="soft-candy">
+            <h2>Kẹo dẻo</h2>
+        </div>
+        <div id="soft-candy-infor" class="infor-container"></div>
+        <div class="hard-candy">
+            <h2>Kẹo cứng</h2>
+        </div>
+        <div id="hard-candy-infor" class="infor-container">
+        </div>
+        <div class="chocolate">
+            <h2>Kẹo So-co-la</h2>
+        </div>
+        <div id="chocolate-infor" class="infor-container"></div>
+    </main>
+
+    <footer>
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <img src="../img/logo.png" width="150px" height="90px" alt="">
+                </div>
+                <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="link-boxes">
+                <ul class="box">
+                    <li class="link_name">Công ty</li>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Liên lạc</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Khởi đầu</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Dịch vụ</li>
+                    <li><a href="#">Thiết </a></li>
+                    <li><a href="#">Web design</a></li>
+                    <li><a href="#">Logo design</a></li>
+                    <li><a href="#">Banner design</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Account</li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">My account</a></li>
+                    <li><a href="#">Prefrences</a></li>
+                    <li><a href="#">Purchase</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Courses</li>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Photography</a></li>
+                    <li><a href="#">Photoshop</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2021 <a href="#">Anie Candy</a>All rights reserved</span>
+                <span class="policy_terms">
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Terms & condition</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <div id="mask"></div>
+    <div id="loading">Đang tải, vui lòng đợi một lát!
+        <img src="../img/loading/loading2.gif" width="70%" alt="">
+    </div>
+    <script src="../js/check-admin-user.js"></script>
+    <script src="../js/candy-infor.js"></script>
+    <script src="../js/loading.js"></script>
+</body>
+
+</html>

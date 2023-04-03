@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Thông tin đơn hàng</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/33f1ec5491.js"></script>
+    <link rel="stylesheet" href="../style/admin.css">
+    <link rel="stylesheet" href="../style/header-footer.css">
+    <link rel="stylesheet" href="../style/loading.css">
+</head>
+
+<body onload="afterPageLoad()">
+    <header>
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Bạn đang tìm gì?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <!-- admin-user -->
+            <div class="edit-infor" id="edit-infor">
+                <a href="./login.html"><img src="../img/pin.png" alt="Ảnh khá lỗi" width="40px"><br>Mời đăng nhập</a>
+            </div>
+            <div class="cart" id="my-cart"></div>
+        </div>
+        <nav class="stage">
+            <div class="logo"><img src="../img/logo.png" width="100%" alt=""></div>
+            <div id="home" class="div">
+                <p id="homep" class="p"><a class="linkb" href="/index.html">Trang chủ</a></p>
+            </div>
+            <div class="div" id="product">
+                <p class="p"><a class="linkb" href="./sale-product.html">Sản phẩm</a></p>
+            </div>
+            <div class="div" id="about">
+                <p class="p"><a class="linkb" href="./candy-infor.html">Thông tin</a></p>
+            </div>
+            <div class="div" id="contact">
+                <p class="p"><a class="linka" href="./contact.html">Liên hệ</a></p>
+            </div>
+        </nav>
+        <div class="register-login" id="register-login">
+        </div>
+    </header>
+
+    <main>
+        <h1>Thông tin đơn hàng</h1>
+        <table>
+            <tbody id="renderPayCheck">
+
+            </tbody>
+        </table>
+        <div id="mask"></div>
+        <div id="loading">Đang tải, vui lòng đợi một lát!</div>
+    </main>
+    <script src="../js/for-user.js"></script>
+    <script src="../js/check-admin-user.js"></script>
+    <script src="../js/loading.js"></script>
+</body>
+
+</html>
