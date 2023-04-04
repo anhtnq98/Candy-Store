@@ -161,7 +161,7 @@ function deepConfirm() {
                 }
             }
         }
-    }, 3000);
+    }, 2000);
 
 }
 

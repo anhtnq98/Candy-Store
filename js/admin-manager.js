@@ -29,8 +29,26 @@ if (loginFlag == null) {
 
 let listPayConfirm = JSON.parse(localStorage.getItem("listPayConfirm"));
 function renderDonHang() {
-    let result = "";
-    let resultAll = "";
+    const VND = new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+    });
+    let result = 
+    `
+    <tr>
+        <td>Số thứ tự</td>
+        <td style ="width: 100px">Tên khách hàng</td>
+        <td>Nội dung đơn hàng</td>
+        <td style ="width: 200px">Địa chỉ khách hàng</td>
+        <td style ="width: 150px">Thành giá</td>
+        <td>Trạng thái đơn hàng</td>
+        <td>Xóa</td>
+    </tr>
+    `;
+    let resultAll = 
+    `
+    
+    `;
 
     if (listPayConfirm == null) {
         listPayConfirm = [];
@@ -39,19 +57,26 @@ function renderDonHang() {
     if (loginFlag.name == "Admin") {
         for (i = 0; i < listPayConfirm.length; i++) {
             let total = 0;
+            let sum = 0;
             for (j = 0; j < listPayConfirm[i].price.length; j++) {
-                total += listPayConfirm[i].quantity[j] * listPayConfirm[i].price[j];
-                resultAll += `${listPayConfirm[i].name[j]}: ${listPayConfirm[i].quantity[j]} cái; ${listPayConfirm[i].quantity[j] * listPayConfirm[i].price[j]}đ<br>`;
+                sum += listPayConfirm[i].quantity[j] * listPayConfirm[i].price[j];
+                total = VND.format(sum)
+                resultAll += `
+                <div style ="padding: 10px; border-bottom: solid pink 2px;">
+                <div>${listPayConfirm[i].name[j]}</div>
+                <div>Số lượng: ${listPayConfirm[i].quantity[j]}</div>
+                <div>Giá tiền: ${listPayConfirm[i].quantity[j] * listPayConfirm[i].price[j]}đ</div>
+                </div>
+                `;
             }
             result +=
                 `
             <tr>
                 <td>${i + 1}</td>
                 <td>${listPayConfirm[i].userName}</td>
-                <td>${listPayConfirm[i].name}</td>
-                <td>${listPayConfirm[i].address}</td>
                 <td>${resultAll}</td>
-                <td>${total}đ</td>
+                <td>${listPayConfirm[i].address}</td>
+                <td>${total}</td>
                 <td><select>
                 <option>Chờ xác nhận</option>
                 <option>Đã xác nhận</option>
@@ -62,14 +87,14 @@ function renderDonHang() {
             </tr>
             `;
         }
-        document.getElementById("renderDonHang").innerHTML = result;
+        document.getElementById("renderlistOder").innerHTML = result;
     }
 }
 renderDonHang();
 
 
 function deleteOder(id) {
-    listPayConfirm.splice(id,1);
+    listPayConfirm.splice(id, 1);
     localStorage.setItem("listPayConfirm", JSON.stringify(listPayConfirm));
     renderDonHang();
 }

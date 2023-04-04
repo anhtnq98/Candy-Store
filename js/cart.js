@@ -136,43 +136,54 @@ function addPayConfirm() {
     let listMadeIn = [];
     let listQuantity = [];
     let listPrice = [];
-    for (i = 0; i < dataCart.length; i++) {
-        if (dataCart[i].userLogin == dataFlag.name) {
-            listProductName.push(dataCart[i].productName);
-            listMadeIn.push(dataCart[i].madeIn);
-            listQuantity.push(dataCart[i].quantity);
-            listPrice.push(Number(dataCart[i].price));
+    if (inputAddress == "") {
+        popUpAddress();
+    } else {
+        for (i = 0; i < dataCart.length; i++) {
+            if (dataCart[i].userLogin == dataFlag.name) {
+                listProductName.push(dataCart[i].productName);
+                listMadeIn.push(dataCart[i].madeIn);
+                listQuantity.push(dataCart[i].quantity);
+                listPrice.push(Number(dataCart[i].price));
+            }
         }
+
+        let newOder = {
+            userName: listUserName,
+            name: listProductName,
+            madeIn: listMadeIn,
+            quantity: listQuantity,
+            price: listPrice,
+            address: inputAddress,
+        };
+        console.log("DS SP MỚI", newOder);
+
+        if (listPayConfirm == null) {
+            listPayConfirm = [];
+        }
+
+        let newDataCart = "";
+
+        listPayConfirm.push(newOder);
+        localStorage.setItem("listPayConfirm", JSON.stringify(listPayConfirm));
+
+        // Xóa sản phẩm đã thanh toán
+        newDataCart = dataCart.filter(item => item.userLogin !== dataFlag.name);
+        localStorage.setItem("listProductCart", JSON.stringify(newDataCart));
     }
-
-    let newOder = {
-        userName: listUserName,
-        name: listProductName,
-        madeIn: listMadeIn,
-        quantity: listQuantity,
-        price: listPrice,
-        address: inputAddress,
-    };
-    console.log("DS SP MỚI", newOder);
-
-    if (listPayConfirm == null) {
-        listPayConfirm = [];
-    }
-
-    let newDataCart = "";
-
-    listPayConfirm.push(newOder);
-    localStorage.setItem("listPayConfirm", JSON.stringify(listPayConfirm));
-    
-    // Xóa sản phẩm đã thanh toán
-    newDataCart = dataCart.filter(item => item.userLogin !== dataFlag.name);
-    localStorage.setItem("listProductCart", JSON.stringify(newDataCart));
-
 }
 
 // hiện pop up thanh toán thành công
 function popUpPay() {
     document.getElementById("snack-bar").innerHTML = "Đã đăng ký đơn hàng, chờ xá nhận!";
+    var x = document.getElementById("snack-bar");
+    x.className = "show";
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 2000);
+}
+
+// hiện pop up không để trống ô address
+function popUpAddress() {
+    document.getElementById("snack-bar").innerHTML = "Mời nhập địa chỉ.";
     var x = document.getElementById("snack-bar");
     x.className = "show";
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 2000);
