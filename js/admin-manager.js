@@ -42,7 +42,6 @@ function renderDonHang() {
         <td style ="width: 200px">Địa chỉ khách hàng</td>
         <td style ="width: 150px">Thành giá</td>
         <td>Trạng thái đơn hàng</td>
-        <td>Xóa</td>
     </tr>
     `;
     let resultAll = 
@@ -81,9 +80,7 @@ function renderDonHang() {
                 <option>Chờ xác nhận</option>
                 <option>Đã xác nhận</option>
                 <option>Đang giao hàng</option>
-                <option>Xóa đơn(xóa sau x ngày)</option>
                 </select></td>
-                <td><button class="btn btn-danger" onclick="deleteOder(${i})">Xóa đơn hàng</button></td>
             </tr>
             `;
         }
@@ -91,13 +88,6 @@ function renderDonHang() {
     }
 }
 renderDonHang();
-
-
-function deleteOder(id) {
-    listPayConfirm.splice(id, 1);
-    localStorage.setItem("listPayConfirm", JSON.stringify(listPayConfirm));
-    renderDonHang();
-}
 
 // chuyển đến trang đăng nhập
 function loginPage() {
